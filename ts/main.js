@@ -3,9 +3,6 @@ var memo = /** @class */ (function () {
     function memo(text) {
         this.text = text;
     }
-    memo.prototype.textMemo = function () {
-        var memo = this.text;
-    };
     return memo;
 }());
 var r = new Ractive({
@@ -19,7 +16,7 @@ var r = new Ractive({
     }
 });
 function exec() {
-    r.set('re', 'test' + r.get('text'));
+    r.set('re', r.get('text'));
 }
 r.on({
     enter: function (e) {
