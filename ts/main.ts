@@ -24,7 +24,7 @@ var r = new Ractive({
     }
 });
 function exec() {
-    r.set('re', r.get('text'));
+    r.set('re', 'test' + r.get('text'));
 }
 
 r.on({
