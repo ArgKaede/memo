@@ -7,6 +7,11 @@ h1{
     color : red ;
 }
 
+imput{
+    width : 280px ;
+    height : 100px ;
+}
+
 #memo p{
     width : 280px ;
     height : 100px ;
