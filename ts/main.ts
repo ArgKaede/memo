@@ -20,6 +20,7 @@ var r = new Ractive({
     }
 });
 function exec() {
+    localStorage.saveKey = r.get('text') ;
     r.set('re', r.get('text'));
 }
 
