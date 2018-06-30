@@ -15,6 +15,7 @@ var r = new Ractive({
         text: null
     }
 });
+var text = r.get('text');
 function exec() {
     var length = localStorage.length;
     var key = 'key' + length;
@@ -24,7 +25,12 @@ function exec() {
 r.on({
     enter: function (e) {
         if (e.event.keyCode == 13) {
-            exec();
+            if (text = null) {
+                localStorage.clear();
+            }
+            else {
+                exec();
+            }
         }
     },
     health: function () {
