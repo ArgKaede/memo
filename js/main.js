@@ -25,7 +25,7 @@ function exec() {
 r.on({
     enter: function (e) {
         if (e.event.keyCode == 13) {
-            if (text == 'd') {
+            if (text === 'd') {
                 localStorage.clear();
             }
             else {
