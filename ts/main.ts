@@ -32,12 +32,13 @@ function exec() {
 r.on({
     enter: function (e) {
         if (e.event.keyCode == 13) {
-            if(text = null){
+            if(text == null){
                 localStorage.clear();
             }else {
                 exec();
             } 
         }
+
     },
     health: function () {
         exec();
