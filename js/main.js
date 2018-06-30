@@ -15,13 +15,12 @@ var r = new Ractive({
         text: null
     }
 });
-var text = r.get('text');
 function exec() {
     var length = localStorage.length;
     var key = 'key' + length;
     localStorage.setItem(key, r.get('text'));
     r.set('re', r.get('text'));
-    if (text == 'd') {
+    if (r.get('text') == 'd') {
         localStorage.clear();
     }
 }
