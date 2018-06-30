@@ -21,16 +21,14 @@ function exec() {
     var key = 'key' + length;
     localStorage.setItem(key, r.get('text'));
     r.set('re', r.get('text'));
+    if (text == 'd') {
+        localStorage.clear();
+    }
 }
 r.on({
     enter: function (e) {
         if (e.event.keyCode == 13) {
-            if (text === 'd') {
-                localStorage.clear();
-            }
-            else {
-                exec();
-            }
+            exec();
         }
     }
 });
