@@ -32,15 +32,11 @@ function exec() {
 r.on({
     enter: function (e) {
         if (e.event.keyCode == 13) {
-            if(text == null){
+            if(text == 'd'){
                 localStorage.clear();
-            }else {
+            }else{
                 exec();
             } 
         }
-
-    },
-    health: function () {
-        exec();
     }
 });
