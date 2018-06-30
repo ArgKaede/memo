@@ -16,7 +16,9 @@ var r = new Ractive({
     }
 });
 function exec() {
-    localStorage.saveKey = r.get('text');
+    var length = localStorage.length;
+    var key = 'key' + length;
+    localStorage.setItem(key, r.get('text'));
     r.set('re', r.get('text'));
 }
 r.on({
