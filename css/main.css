@@ -18,3 +18,19 @@ imput{
     border : solid 2px #222222 ;
     padding : 5px ;
 }
+
+#output div{
+    width : 280px ;
+    height : 50px ;
+}
+
+#output div:hover {
+    color : #fff ;
+    background-color : orange ;    
+}
+
+#jsmemo {
+    display: inline-block;
+    width : 280px ;
+    height : 100px ;
+}

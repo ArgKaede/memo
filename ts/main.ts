@@ -1,5 +1,17 @@
 /// <reference path="./ractive.d.ts"/>
 
+
+// jsMemo
+
+
+
+
+
+
+
+
+// ractive
+
 class memo {
     text : string ;
 
@@ -22,13 +34,28 @@ var r = new Ractive({
 
 
 function exec() {
+
+    if(r.get('text') == 'd') {
+        localStorage.clear();
+        r.set('re',null);
+        r.set('text',null);
+        return;
+    }
+
     var length = localStorage.length;
     var key = 'key' + length;
     localStorage.setItem(key, r.get('text') );
-    r.set('re', r.get('text'));
-    if(r.get('text') == 'd') {
-        localStorage.clear();
-     }
+
+    var value = "";
+    
+    for (var i = 0; i < length +1 ; i++){
+        value += '<p>' + localStorage.getItem('key' + i) + '</p>';
+        }
+
+    r.set('re', value,);
+    r.set('text',null);
+
+
 }
 
 r.on({
