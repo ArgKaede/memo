@@ -1,10 +1,31 @@
 /// <reference path="./ractive.d.ts"/>
+declare var Ractive;
 
+// tsMemo
 
-// jsMemo
+class tsMemo{
+    re:string;
+    constructor(){      
+    }
+    getValue(){
+        var re = document.getElementById('tsMemo').value;
+        if(re == "") {
+            localStorage.clear();
+            return;
+        }
+        var length = localStorage.length;
+        var key = 'key' + length;
+        localStorage.setItem(key, re );
+    }
 
+    enter(){
+        if(window.event.keyCode==13){
+            getValue();
+    }
+}
 
-
+var tm = new tsMemo()
+tm.enter();
 
 
 
@@ -64,4 +85,4 @@ r.on({
                 exec();
         }
     }
-});
+})
